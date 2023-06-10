@@ -3,7 +3,7 @@
 class Singletone:
     instanse = None
 
-    def __new__(cls):
+    def __new__(cls) -> 'Singletone':
         if cls.instanse is None:
             cls.instanse = super().__new__(cls)
         return cls.instanse
