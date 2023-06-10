@@ -1,15 +1,15 @@
 class LinkedNode:
 
-    def __init__(self, value):
+    def __init__(self, value) -> None:
         self.value = value
         self.next = None
 
-    def show_list(self):
+    def show_list(self) -> None:
         pass
         # print(self.value, self.next)
 
 
-def createList():
+def createList() -> LinkedNode:
     nodes = list(map(lambda x: LinkedNode(x + 1), list(range(10))))
     head = LinkedNode(0)
     curr = head
@@ -21,11 +21,11 @@ def createList():
     return head
 
 
-def print_linded_list(node):
+def print_linded_list(node) -> None:
     curr = node
     str = ""
-    while curr != None:
-        if curr.value != None:
+    while curr is not None:
+        if curr.value is not None:
             str += "%s -> " % curr.value
 
         curr = curr.next
@@ -33,11 +33,11 @@ def print_linded_list(node):
     print(str)
 
 
-def reverse_list(node: LinkedNode):
+def reverse_list(node: LinkedNode) -> LinkedNode | None:
     prev_node = None
     head_next = node
 
-    while head_next != None:
+    while head_next is not None:
         next_head = head_next.next
         head_next.next = prev_node
         prev_node = head_next

@@ -1,19 +1,16 @@
-from tkinter.messagebox import NO
-
-
 class Item(object):
     def __init__(self, next_item=None, prev_item=None, elem=None):
         self.next_item = next_item
         self.prev_item = prev_item
         self.elem = elem
 
+
 class DoubleLinkedList(object):
-    
+
     def __init__(self, head=None, tail=None, length=0):
         self.head = head
         self.tail = tail
         self.lenth = length
-        
 
     def push(self, elem):
         if self.tail is None:
@@ -26,7 +23,7 @@ class DoubleLinkedList(object):
             self.tail.next_item = item
             self.tail = item
             self.length += 1
-        
+
     def pop(self):
         try:
             if self.tail is None:
@@ -50,8 +47,8 @@ class DoubleLinkedList(object):
             item = Item(self.head, None, elem)
             self.head.prev_item = item
             self.head = self.head.prev_item
-            self.length +=1
-        
+            self.length += 1
+
     def shift(self, elem):
         '''Убирет элемент из начала списка'''
         try:
@@ -64,7 +61,7 @@ class DoubleLinkedList(object):
                 self.length -= 1
         except Exception as error:
             print("Caught this error: " + error.args[0])
-            
+
     def len(self):
         ''' Длина списка'''
         return self.length
@@ -84,7 +81,7 @@ class DoubleLinkedList(object):
                     cur.next_item.prev_item = temporary_item
                     self.length -= 1
                     break
-                elif (cur.elem == elem) and  (cur.next_item is None):
+                elif (cur.elem == elem) and (cur.next_item is None):
                     cur.prev_item.next_item = None
                     self.tail = cur.prev_item
                     self.length -= 1
