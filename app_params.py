@@ -4,6 +4,7 @@ from datetime import datetime
 
 # Принимаем параметры из командной строки
 
+
 def main(args):
     ans = 1
     for arg in args[1:]:
