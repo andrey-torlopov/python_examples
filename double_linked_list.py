@@ -1,4 +1,4 @@
-class Item(object):
+class Item:
     def __init__(self, next_item=None, prev_item=None, elem=None):
         self.next_item = next_item
         self.prev_item = prev_item
