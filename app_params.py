@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#! /usr/bin/python3.12
 import sys
 from datetime import datetime
 

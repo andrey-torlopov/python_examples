@@ -29,7 +29,7 @@ class CircularLinkedList:
         if self.head is not None:
             while (True):
                 print(temp.data)
-                temp = temp.head
+                temp = temp.next
                 if (temp == self.head):
                     break
 
@@ -38,5 +38,6 @@ a = CircularLinkedList()
 a.push(1)
 a.push(2)
 a.push(3)
+a.push(4)
 
 a.printList()
