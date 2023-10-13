@@ -27,12 +27,12 @@
     // будет автоматически активироваться при переходе в этот проект
     "python.linting.enabled": true,
     // Включает линтер для питона
-    "python.linting.flake8Enabled": true,
+    // "python.linting.flake8Enabled": true,
     // Выбор каким линтером пользоваться.  Я выбрал flake8.
-    "python.linting.flake8Args": [
-        "--max-line-length=250",
-        "--ignore=E402,F841,F401,E302,E305,E711",
-    ],
+    // "python.linting.flake8Args": [
+    //     "--max-line-length=250",
+    //     "--ignore=E402,F841,F401,E302,E305,E711",
+    // ],
     // Настройки flake8. Я лично выставил себе только увеличение максимальной
     // длинны строки - по дефолту 80, этого мало для меня
     "[python]": { 
